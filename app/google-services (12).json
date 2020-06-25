@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "732768569465",
+    "firebase_url": "https://fir-koujek.firebaseio.com",
+    "project_id": "firebase-koujek",
+    "storage_bucket": "firebase-koujek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732768569465:android:484968bfbf2961d0",
+        "android_client_info": {
+          "package_name": "co.greative.gantarcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732768569465-8i3mdedrtv4qqoaj9po1or0r93af0go9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.greative.gantarcustomer",
+            "certificate_hash": "39e1f93c759687c81e274eb54a636a5d1035d905"
+          }
+        },
+        {
+          "client_id": "732768569465-t4i5rgu6spjl37afjh0h5i475qb04b9b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "732768569465-f5sbdbaksipi250q0c348q4osj2chs0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYCCswTqwnHJgN7aeBWSsFXPi9qoU8G4c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732768569465-t4i5rgu6spjl37afjh0h5i475qb04b9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732768569465:android:0eb039299f9e524e",
+        "android_client_info": {
+          "package_name": "co.greative.gantarcustomerdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732768569465-ov683du6ssdgcpsqg1r29laqavr4iria.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.greative.gantarcustomerdriver",
+            "certificate_hash": "39e1f93c759687c81e274eb54a636a5d1035d905"
+          }
+        },
+        {
+          "client_id": "732768569465-t4i5rgu6spjl37afjh0h5i475qb04b9b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "732768569465-f5sbdbaksipi250q0c348q4osj2chs0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYCCswTqwnHJgN7aeBWSsFXPi9qoU8G4c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732768569465-t4i5rgu6spjl37afjh0h5i475qb04b9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

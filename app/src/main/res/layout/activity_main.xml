@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/main_header"
+            android:backgroundTint="@color/material_yellow_400"
+            android:scaleType="fitXY" />
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/main_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabLayoutHeightTextImage"
+            android:layout_gravity="bottom"
+            android:background="@color/transparent"
+            app:stl_clickable="true"
+            app:stl_defaultTabTextColor="@color/material_light_white"
+            app:stl_distributeEvenly="true"
+            app:stl_dividerColor="@color/transparent"
+            app:stl_indicatorColor="@color/transparent"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorThickness="0dp"
+            app:stl_underlineColor="@color/transparent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            app:srcCompat="@drawable/logo_mangjek" />
+    </FrameLayout>
+
+    <co.cvdcc.brojekcustomer.utils.view.CustomViewPager
+        android:id="@+id/main_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

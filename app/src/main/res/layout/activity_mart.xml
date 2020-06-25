@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:adjustViewBounds="true"
+            android:background="@color/splash_bg_color"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/header_toolbar" />
+
+        <TextView
+            android:id="@+id/rideCar_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/home_mMart"
+            android:textAllCaps="true"
+            android:textColor="@color/material_light_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <co.cvdcc.brojekcustomer.utils.view.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/martMargin"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mart_nearDriver"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            android:padding="@dimen/martMargin"/>
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="312dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mart_martName"
+                            android:padding="@dimen/martMargin"/>
+
+                        <EditText
+                            android:id="@+id/mart_martName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/mart_mart"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:drawableLeft="@drawable/ic_menu_list"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/mart_martLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:foreground="?android:attr/selectableItemBackground">
+                            <TextView
+                                android:id="@+id/mart_martLocationText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mart_location"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:padding="4dp"
+                                android:drawableLeft="@drawable/ic_location"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/mart_menuText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/mart_order"
+                                        android:gravity="center_vertical"
+                                        android:textSize="16sp"
+                                        android:drawableLeft="@drawable/ic_menu_list"
+                                        android:layout_centerVertical="true"/>
+
+                                    <TextView
+                                        android:clickable="true"
+                                        android:id="@+id/mart_minusList"
+                                        android:layout_width="48dp"
+                                        android:layout_height="48dp"
+                                        android:textSize="24sp"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center"
+                                        android:text="@string/mart_minus"
+                                        android:layout_alignParentRight="true"/>
+
+                                    <TextView
+                                        android:clickable="true"
+                                        android:id="@+id/mart_plusList"
+                                        android:layout_width="48dp"
+                                        android:layout_height="48dp"
+                                        android:textSize="24sp"
+                                        android:background="?attr/selectableItemBackground"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center"
+                                        android:text="@string/mart_plus"
+                                        android:layout_toLeftOf="@+id/mart_minusList"/>
+                                </RelativeLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/mart_menuListRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1"
+                                    android:padding="4dp">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/mart_estimatedBiaya"
+                                        android:layout_weight="0.4"
+                                        android:layout_gravity="center_vertical"/>
+                                    <EditText
+                                        android:id="@+id/mart_estimatedCost"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.6"
+                                        android:inputType="number"
+                                        android:maxLines="1"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mart_to"
+                            android:padding="@dimen/martMargin"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/mart_destinationButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp">
+                            <TextView
+                                android:id="@+id/mart_destinationText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mart_location"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:padding="4dp"
+                                android:drawableLeft="@drawable/ic_location"/>
+                        </androidx.cardview.widget.CardView>
+                        <EditText
+                            android:id="@+id/mart_detailsName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/martMargin"
+                            android:layout_marginTop="8dp"
+                            android:hint="@string/mart_details"
+                            android:drawableLeft="@drawable/ic_menu_list"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mart_detailOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blueSoft"
+                    android:clickable="true"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/mart_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/ride_price"
+                        android:textColor="@color/grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/mart_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/ride_cost"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
+
+                    <RadioGroup
+                        android:id="@+id/mart_paymentGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/material_light_white"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/mart_mPayPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="@string/text_mPay"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:theme="@style/PaymentButton" />
+
+
+                        <RadioButton
+                            android:id="@+id/mart_cashPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="@string/text_cash"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:theme="@style/PaymentButton" />
+
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/mart_mPayBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="108dp"
+                            android:text="@string/text_updating"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/mart_topUp"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/text_topUp"
+                            android:textColor="@color/material_blue_grey_700" />
+
+                        <TextView
+                            android:id="@+id/discountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/mart_mPayBalance"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginStart="30dp"
+                            android:text="@string/ride_discount"
+                            android:textColor="@color/material_blue_grey_700"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/mart_order"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/text_order"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </co.cvdcc.brojekcustomer.utils.view.CustomScrollView>
+</LinearLayout>

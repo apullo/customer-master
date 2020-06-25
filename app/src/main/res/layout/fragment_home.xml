@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/material_yellow_600"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:text="SALDO"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/home_mPayBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/text_updating"
+                android:textColor="@color/material_light_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/home_topUpButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/text_topUp"
+                android:textColor="@color/material_light_white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/material_light_white">
+
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/slide_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/slide_viewPager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/splash_bg_color"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/home_mRide"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanRide"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/ride" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mRide"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mCar"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanCar"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/car" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mCar"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mSend"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanSend"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/send" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mSend"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mFood"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanFood"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/food" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mFood"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/splash_bg_color"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/home_mMart"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanMart"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/mart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mMart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mMassage"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanMassage"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mMassage"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/massage" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mBox"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanBox"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/box" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mBox"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mService"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="@color/GanService"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/auto" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mService"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/home_mAuto"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/pulsa"
+                    android:tint="@color/material_grey_300" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mAuto"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mTour"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_mtour"
+                    android:tint="@color/material_grey_300" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mTour"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mSchool"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/med"
+                    android:tint="@color/material_grey_300" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mSchool"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mStore"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mStore"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/event"
+                    android:tint="@color/material_grey_300" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:baselineAligned="false"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/home_mGlam"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/glam"
+                    android:tint="@color/material_grey_300" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mGlam"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mClean"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mClean"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/clean"
+                    android:tint="@color/material_grey_300" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_mX"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/menu_marginTop"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_mservice" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/menu_marginBottom"
+                    android:maxLines="1"
+                    android:text="@string/home_mTour"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_light_white"
+                    android:textSize="@dimen/menu_fontSize" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

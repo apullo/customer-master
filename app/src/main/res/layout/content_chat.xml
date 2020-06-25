@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/splash_bg_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        app:stackFromEnd="true"
+        android:layout_marginBottom="60dp"
+        android:id="@+id/reviChat">
+    </androidx.recyclerview.widget.RecyclerView>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+        <!--<include-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--layout="@layout/list_chat_me"/>-->
+
+        <!--<include android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--layout="@layout/list_chat_you"/>-->
+
+        <!--<include-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--layout="@layout/list_chat_me"/>-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textSize="16dp"
+            android:gravity="bottom"
+            android:hint="Type your text here!"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue"/>
+        <ImageView
+            android:id="@+id/butSend"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="7"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_send"/>
+    </LinearLayout>
+</RelativeLayout>
+

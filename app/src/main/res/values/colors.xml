@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/splash_bg_color</color>
+    <color name="colorPrimaryDark">@color/splash_bg_color</color>
+    <color name="colorAccent">@color/directionLine</color>
+    <color name="colorYellow">#B1A53C</color>
+
+    <color name="splash_bg_color">#3a5068</color>
+
+    <color name="colorPrimarySoft">#DDCC57</color>
+    <color name="colorPrimaryBuilding">#2e8499</color>
+
+    <color name="directionLine">#1367a7</color>
+
+    <color name="blueSoft">#e7f1f5</color>
+    <color name="grey">#F1E3A1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="brown">#b87e00</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#044271</color>
+    <color name="lightGrey">#f4f4f4</color>
+
+    <color name="blackTransparent">#a0000000</color>
+    <color name="GanRide">#e99e23</color>
+    <color name="GanCar">#17619d</color>
+    <color name="GanSend">#8bc440</color>
+    <color name="GanBox">#95663e</color>
+    <color name="GanMart">#c83779</color>
+    <color name="GanMassage">#0bac79</color>
+    <color name="GanFood">#d13636</color>
+    <color name="GanService">#36b5d1</color>
+    <color name="Color_bg_login">#EAB30D</color>
+    <color name="gradient_start">#FFBF00</color>
+    <color name="gradient_end">#FAE108</color>
+</resources>

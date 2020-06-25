@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "297302437969",
+    "firebase_url": "https://mangjek-145809.firebaseio.com",
+    "project_id": "mangjek-145809",
+    "storage_bucket": "mangjek-145809.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297302437969:android:c23a16c5ea510c05",
+        "android_client_info": {
+          "package_name": "net.gumcode.mangjek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297302437969-427i0sjpj4sskjf7f279gh17820gokic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFtp31-i364gGwQ4tcLTbcMKwIcTdmzz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297302437969:android:5920de3503a2d18c",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297302437969-427i0sjpj4sskjf7f279gh17820gokic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFtp31-i364gGwQ4tcLTbcMKwIcTdmzz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

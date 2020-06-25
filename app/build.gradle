@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+    defaultConfig {
+        applicationId "co.cvdcc.brojekcustomer"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+//import io.realm.transformer.RealmTransformer
+//android.registerTransform(new RealmTransformer())
+//dependencies {
+//    implementation "io.realm:realm-annotations:$realm_version"
+//    implementation "io.realm:realm-android-library:$realm_version"
+//    annotationProcessor "io.realm:realm-annotations-processor:$realm_version"
+//}
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+//    androidTestAnnotationProcessor('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+    implementation ('com.mikepenz:fastadapter:2.0.0@aar') {
+        transitive = true
+    }
+//    testAnnotationProcessor'junit:junit:4.12'
+//    annotationProcessor 'com.contentful.vault:compiler:3.2.3'
+//    annotationProcessor 'com.contentful.vault:core:3.2.3'
+//    compile 'com.contentful.vault:core:3.2.3'
+//    implementation 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'com.google.dagger:dagger:2.24'
+    implementation 'com.google.dagger:dagger-compiler:2.0'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+//    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.android.support:design:29.0.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.guava:guava:24.1-jre'
+    implementation 'com.dmitrymalkovich.android:material-design-dimens:1.4'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.7.0@aar'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'me.relex:circleindicator:1.2.1@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.google.firebase:firebase-core:17.4.1'
+    implementation 'com.google.firebase:firebase-messaging:20.1.7'
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+//    implementation 'com.google.android.gms:play-services:15.0.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.makeramen:roundedimageview:2.2.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation ('cn.trinea.android.view.autoscrollviewpager:android-auto-scroll-view-pager:1.1.2') {
+        exclude module: 'support-v4'
+    }
+    implementation 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+    apply plugin: 'com.google.gms.google-services'
+
+}
+

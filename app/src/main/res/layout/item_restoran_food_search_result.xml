@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/restoranFoodSearchResult"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/restoranFoodSearchResult_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_mfood_explore"/>
+
+        <TextView
+            android:id="@+id/restoranFoodSearchResult_content"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/restoranFoodSearchResult_distance"
+            android:layout_toRightOf="@+id/restoranFoodSearchResult_icon"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            tools:text="Gorengan Yahud Cipta rasa surabaya hahaha terus coba kontennya kebawah terus jadinya kaya gini."
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/restoranFoodSearchResult_description"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/restoranFoodSearchResult_content"
+            android:layout_toLeftOf="@+id/restoranFoodSearchResult_distance"
+            android:layout_toRightOf="@+id/restoranFoodSearchResult_icon"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            tools:text="Restoran"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/restoranFoodSearchResult_distance"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            tools:text="600.00 km"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimarySoft" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:id="@+id/itemHelp_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/material_yellow_600"
+        android:paddingBottom="6dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="6dp">
+
+        <ImageView
+            android:id="@+id/itemHelp_icon"
+            android:layout_width="52dp"
+            android:tint="@color/colorYellow"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_mcar" />
+
+        <TextView
+            android:id="@+id/itemHelp_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toLeftOf="@+id/itemHelp_arrow"
+            android:layout_toRightOf="@+id/itemHelp_icon"
+            android:maxLines="1"
+            android:text="@string/home_mRide"
+            android:textAllCaps="true"
+            android:textColor="@color/material_light_white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/itemHelp_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:tint="@color/material_light_white"
+            android:src="@drawable/ic_keyboard_arrow_right_black_48dp" />
+
+    </RelativeLayout>
+</LinearLayout>
